@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/chrome-manifest",
+	"name": "Mobbin Unlocked",
+	"description": "Unlocks Mobbin's premium features",
+	"permissions": ["activeTab"],
+	"version": "1.0",
+	"manifest_version": 3,
+	"icons": {
+		"16": "images/icon-16.png",
+		"24": "images/icon-24.png",
+		"32": "images/icon-32.png",
+		"48": "images/icon-48.png",
+		"128": "images/icon-128.png"
+	},
+	"content_scripts": [
+		{
+			"js": ["scripts/content.js"],
+			"matches": ["https://mobbin.com/*"],
+			"run_at": "document_idle"
+		}
+	]
+}
